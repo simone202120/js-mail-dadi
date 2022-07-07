@@ -1,18 +1,23 @@
 let maildom = document.getElementById("mail");
 let verifica = document.getElementById("verifica")
-let ListaInvitati = ["gionni@pippo", "gionny@pluto", "pippo@pluo", "pippo@gionny", "paperino@topolino"];
+const Lista = ["gionni@pippo", "gionny@pluto", "pippo@pluo", "pippo@gionny", "paperino@topolino"];
+let entrata ="no";
 
 verifica.addEventListener("click",
     function()  {
 
-        for (let i = 0; i < ListaInvitati.length; i++){
+        for (let i = 0; i < Lista.length; i++){
 
-            if(maildom == ListaInvitati[i]){
-                alert("entra pure");
-            }else
-             alert("riprova con un'altra mail")
+            if(maildom.value == Lista[i]){
+                 entrata ="si";
+            }
         }
+        if (entrata == "si"){
+            alert("entra");
 
+        }else {
+            alert("riprova");
+        }
     }
 
 )
